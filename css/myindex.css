@@ -1,0 +1,791 @@
+@import url("https://fonts.googleapis.com/css2?family=Arvo&family=Poppins:wght@200;300;400;500;600&family=Rubik:wght@300;400;500;600&display=swap");
+
+/*========== Reset ==========*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #f7f8fc;
+  font-family: "Rubik", sans-serif;
+}
+
+:root {
+  --primary-color: #fff;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+span {
+  display: inline-block;
+}
+
+/*========== Utility Classess ==========*/
+.flex {
+  display: flex;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-family: "Arvo", serif;
+  margin: 18px 0px;
+  color: var(--primary-color);
+}
+
+/*========== Hero Section ==========*/
+
+.hero-section {
+  height: 100%;
+  background-image: linear-gradient(#092617, #267871);
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1180px;
+  margin: auto;
+}
+
+.hero-section header {
+  padding: 20px 0px;
+}
+
+.hero-section nav {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero-section .nav-logo span {
+  font-size: 1.6rem;
+  color: var(--primary-color);
+}
+
+.hero-section .nav-links ul {
+  gap: 20px;
+}
+
+.hero-section .nav-links ul li a {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+}
+
+.hero-section .nav-button {
+  gap: 20px;
+}
+
+.hero-section .nav-button a {
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  border-radius: 6px;
+  outline: none;
+  transition: 0.2s ease-in;
+}
+
+.hero-section .primary-button {
+  border: 1px solid black;
+  padding: 8px 28px;
+  border-color: #06d9c7;
+}
+
+.hero-section .primary-button:hover {
+  border-color: #00b7ff;
+}
+
+.hero-section .secondary-button {
+  background-color: #059a8e;
+  padding: 8px 30px;
+}
+
+.hero-section .secondary-button:hover {
+  background-color: #039185;
+}
+
+.hero-section a svg {
+  vertical-align: middle;
+  color: var(--primary-color);
+}
+
+/*========= Main Section ==========*/
+
+.hero-section .main-section {
+  align-items: center;
+  color: var(--primary-color);
+  padding: 2rem 0;
+}
+
+.hero-section .left-section p {
+  line-height: 1.5rem;
+  text-align: justify;
+}
+
+.hero-section .left-section #user-name {
+  margin: 1.4rem 0;
+  font-size: 2.5rem;
+}
+
+.hero-section .left-section {
+  width: 70%;
+}
+
+.hero-section .right-section img {
+  width: 100%;
+  animation: updown 0.9s ease-in-out infinite alternate-reverse both;
+}
+
+@keyframes updown {
+  from {
+    transform: translate(0, 0);
+  }
+
+  to {
+    transform: translate(0, 15px);
+  }
+}
+
+/*========= Signup Form Section =========*/
+
+.signup-form-section {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.2);
+  z-index: 102;
+  background-color: var(--primary-color);
+  font-family: "poppins", sans-serif;
+  border-radius: 6px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px 30px 10px 30px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s ease-in-out;
+  max-width: 700px;
+}
+
+.active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.signup-form-section i {
+  color: #000;
+  float: right;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.signup-form-section form {
+  margin-top: 1rem;
+}
+
+.signup-form-section span {
+  font-size: 22px;
+  color: #464343;
+}
+
+.signup-form-section form .fields {
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0px 10px;
+  margin-top: 1.2rem;
+}
+
+.signup-form-section form .fields .input-field {
+  display: flex;
+  width: calc(100% / 2 - 15px);
+  flex-direction: column;
+  margin: 4px 0;
+}
+
+.signup-form-section form .fields label {
+  font-weight: 500;
+  color: #464343;
+  font-size: 1rem;
+}
+
+.signup-form-section form .fields input {
+  outline: none;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  font-weight: 400;
+  color: #333;
+  height: 42px;
+  margin: 8px 0px;
+  padding: 0px 15px;
+  font-size: 1rem;
+}
+
+.signup-form-section .input-field input:is(:focus) {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.13);
+}
+
+.signup-form-section form input[type="submit"] {
+  height: 40px;
+  max-width: 200px;
+  width: 100%;
+  border: none;
+  outline: none;
+  color: #fff;
+  border-radius: 5px;
+  margin: 25px 0;
+  background-color: #059a8e;
+  font-size: 17px;
+  transition: all 0.3s linear;
+}
+
+.signup-form-section form input[type="submit"] {
+  background-color: #048277;
+  cursor: pointer;
+}
+
+/*========= Login Form Section =========*/
+
+.login-form-section {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.2);
+  background-color: var(--primary-color);
+  font-family: "poppins", sans-serif;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  padding: 35px 35px 20px 35px;
+  max-width: 550px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s ease-in-out;
+}
+
+.active-login {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.login-form-section span {
+  font-size: 22px;
+  color: #464343;
+  font-weight: 500;
+}
+
+.login-form-section i {
+  color: #000;
+  float: right;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.login-form-section form {
+  margin-top: 1rem;
+}
+
+.login-form-section .fields {
+  gap: 0px 25px;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.login-form-section form .fields .input-field {
+  width: calc(100% / 1 - 25px);
+  display: flex;
+  flex-direction: column;
+  margin: 8px 0;
+}
+
+.login-form-section form .fields label {
+  font-weight: 500;
+  color: #464343;
+  font-size: 1.1rem;
+}
+
+.login-form-section form .fields .input-field input {
+  outline: none;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  font-weight: 400;
+  height: 42px;
+  margin: 8px 0;
+  padding: 0 15px;
+  font-size: 1rem;
+}
+
+.login-form-section .input-field input:is(:focus) {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.13);
+}
+
+.login-form-section form input[type="submit"] {
+  height: 45px;
+  max-width: 200px;
+  width: 100%;
+  border: none;
+  outline: none;
+  color: var(--primary-color);
+  border-radius: 5px;
+  margin: 25px 0;
+  background-color: #059a8e;
+  font-size: 17px;
+  transition: all 0.3s linear;
+}
+
+.login-form-section form input[type="submit"]:hover {
+  background-color: #048277;
+  cursor: pointer;
+}
+
+.login-form-section .forgot-password {
+  text-align: right;
+}
+
+/* Forgot Password */
+
+.login-form-section-forgot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.2);
+  background-color: var(--primary-color);
+  font-family: "poppins", sans-serif;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  padding: 35px 35px 20px 35px;
+  max-width: 550px;
+  transition: all 0.4s ease-in-out;
+}
+
+.login-form-section-forgot span {
+  font-size: 1.2rem;
+  color: #464343;
+  font-weight: 500;
+}
+
+.login-form-section-forgot i {
+  color: #000;
+  float: right;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.login-form-section-forgot form {
+  margin-top: 1rem;
+}
+
+.login-form-section-forgot .fields {
+  gap: 0px 25px;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.login-form-section-forgot form .fields .input-field {
+  width: calc(100% / 1 - 25px);
+  display: flex;
+  flex-direction: column;
+  margin: 12px 0;
+}
+
+.login-form-section-forgot form .fields label {
+  /* font-weight: 500; */
+  color: #464343;
+  font-size: 1.1rem;
+}
+
+.login-form-section-forgot form .fields .input-field input {
+  outline: none;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  font-weight: 400;
+  height: 42px;
+  margin: 8px 0;
+  padding: 0 15px;
+  font-size: 1rem;
+}
+
+.login-form-section-forgot .input-field input:is(:focus) {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.13);
+}
+
+.login-form-section-forgot form input[type="submit"] {
+  height: 45px;
+  max-width: 200px;
+  width: 100%;
+  border: none;
+  outline: none;
+  color: var(--primary-color);
+  border-radius: 5px;
+  margin: 25px 0;
+  background-color: #059a8e;
+  font-size: 17px;
+  transition: all 0.3s linear;
+}
+
+.login-form-section-forgot form input[type="submit"]:hover {
+  background-color: #048277;
+  cursor: pointer;
+}
+
+/*========== Card Form ==========*/
+
+.card-form-title {
+  justify-content: center;
+  margin-top: 5rem;
+  font-size: 1.8rem;
+  font-family: "arvo", sans-serif;
+}
+
+.card-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.2);
+  background-color: var(--primary-color);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  padding: 30px 30px 20px;
+  width: 100%;
+  max-width: 900px;
+  font-family: "poppins", sans-serif;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s ease-in-out;
+}
+
+.active-card {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.card-form span {
+  font-weight: 500;
+  color: #333;
+  font-size: 1.5rem;
+}
+
+.card-form i {
+  color: #000;
+  float: right;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.card-form form {
+  margin-top: 1.1rem;
+}
+
+.card-form .fields {
+  flex-wrap: wrap;
+  gap: 0px 30px;
+}
+
+.card-form .fields .input-fields {
+  display: flex;
+  width: calc(100% / 3 - 30px);
+  flex-direction: column;
+  margin: 5px 0;
+}
+
+.card-form .input-fields label {
+  font-size: 15px;
+  font-weight: 500;
+  color: #464343;
+}
+
+.card-form .input-fields input {
+  outline: none;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  font-weight: 400;
+  color: #333;
+  height: 42px;
+  margin: 8px 0;
+  padding: 0 15px;
+  font-size: 1rem;
+}
+
+.card-form .input-fields select {
+  outline: none;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  font-weight: 400;
+  color: #333;
+  height: 42px;
+  margin: 8px 0;
+  padding: 0 15px;
+  font-size: 1rem;
+}
+
+.card-form .input-fields .logo {
+  padding: 10px;
+}
+
+.card-form input:is(:focus) {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.13);
+}
+
+.card-form form input[type="submit"] {
+  height: 45px;
+  max-width: 200px;
+  width: 100%;
+  border: none;
+  outline: none;
+  color: var(--primary-color);
+  border-radius: 5px;
+  margin: 25px 0;
+  background-color: #059a8e;
+  font-size: 17px;
+  transition: all 0.3s linear;
+}
+
+.card-form input[type="submit"]:hover {
+  background-color: #048277;
+  cursor: pointer;
+}
+
+/* Container-card-design */
+.container-card-design {
+  max-width: 1238px;
+  margin: auto;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/*========== Card Section ==========*/
+
+.card-section {
+  color: #000;
+  margin: 10px 0px;
+  padding: 3.6rem 0rem;
+}
+
+.card-section .card {
+  background-color: #fff;
+  width: 390px;
+  height: auto;
+  text-align: center;
+  padding:20px 0px;
+  border-radius: 6px;
+  box-shadow: 0px 0px 10px #ccc;
+}
+
+.card-section .card-box {
+  margin: 16px 0px;
+}
+
+/* .card-section .profile-image {
+  width: 150px;
+  height: 150px;
+  line-height: 150px;
+  text-align: center;
+  border-radius: 100px;
+  margin: auto;
+  border: 1px solid black;
+} */
+.card-section .profile-image {
+  width: 35%;
+  max-height: 50px;
+  height: 100%;
+  margin: auto;
+  display: inline-block;
+
+}
+
+.card-section .profile-image img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.card-section .business-name {
+  font-size: 1.5rem;
+}
+
+.card-section .hr-line {
+  width: 42%;
+  height: 3px;
+  margin-right: auto;
+  margin-left: auto;
+  background: skyblue;
+  border: none;
+  outline: none;
+}
+
+.card-section .name {
+  font-size: 1.3rem;
+}
+
+.card-section .icon a i {
+  width: 38px;
+  height: 38px;
+  line-height: 38px;
+  text-align: center;
+  background-color: skyblue;
+  border-radius: 100%;
+  font-size: 16px;
+  margin: 0px 5px;
+  color: #fff;
+}
+
+.card-section .card-icon a i {
+  color: black;
+}
+
+.card-section .website-url {
+  color: black !important;
+}
+
+.card-section .social-media-icon a i {
+  width: 38px;
+  height: 38px;
+  line-height: 38px;
+  text-align: center;
+  border-radius: 100%;
+  font-size: 16px;
+  margin: 0px 5px;
+  color: #fff;
+}
+
+.card-section .social-media-icon .fa-facebook-f {
+  background-color: #1a4790;
+}
+
+.card-section .social-media-icon .fa-instagram {
+  background: linear-gradient(10deg, #efa513, #9007dc);
+}
+
+.card-section .social-media-icon .fa-youtube {
+  background: #c62026;
+}
+
+.card-section .social-media-icon .fa-twitter {
+  background: #1c9deb;
+}
+
+/*========== Card Section Design 2 ==========*/
+
+.card-section-2 {
+  color: #000;
+  margin: 10px 0px;
+  padding: 3.6rem 0rem;
+}
+
+.card-section-2 .card {
+  width: 390px;
+  height: 665px;
+  box-shadow: 0px 0px 10px #ccc;
+  border-radius: 6px;
+  position: relative;
+  background-color: #fff;
+}
+
+.card-section-2 .card-box {
+  margin: 12px 0px;
+}
+
+.card-section-2 .card .top-section {
+  background-color: #393939;
+  max-width: 420px;
+  max-height: 280px;
+  width: 100%;
+  height: 750px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  padding: 12px 0px;
+  text-align: center;
+  /* -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 38%, 82% 55%, 52% 65%, 24% 59%, 0 48%); */
+/* clip-path: polygon(0% 0%, 100% 0%, 100% 38%, 82% 55%, 52% 65%, 24% 59%, 0 48%) */
+}
+
+.card-section-2 .profile-image img {
+  width: 100%;
+  border-radius: 100px;
+}
+
+.card-section-2 .profile-image {
+  width: 150px;
+  height: 150px;
+  line-height: 150px;
+  text-align: center;
+  border-radius: 10px;
+  margin: auto;
+}
+
+.card-section-2 .business-name {
+  font-size: 1.3rem;
+  color: #fff;
+}
+
+.card-section-2 .name {
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+.card-section-2 .card .bottom-section {
+  text-align: center;
+}
+
+.card-section-2 .card .bottom-section .card-box {
+  margin: 29px 0px;
+  font-size: 1.1rem;
+}
+
+.card-section-2 .icon a i {
+  width: 38px;
+  height: 38px;
+  line-height: 38px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 100%;
+  font-size: 16px;
+  margin: 0px 5px;
+  color: #555353;
+  box-shadow: 0px 0px 10px #ccc;
+}
+
+.card-section-2 .icon {
+  position: absolute;
+  top: 39%;
+  left: 24%;
+}
+
+.card-section-2 .card-icon a i {
+  color: black;
+}
+
+.card-section-2 .website-url {
+  color: black !important;
+}
+
+.card-section-2 .social-media-icon a i {
+  width: 38px;
+  height: 38px;
+  line-height: 38px;
+  text-align: center;
+  border-radius: 100%;
+  font-size: 16px;
+  margin: 0px 5px;
+  color: #fff;
+}
+
+.card-section-2 .social-media-icon .fa-facebook-f {
+  background-color: #1a4790;
+}
+
+.card-section-2 .social-media-icon .fa-instagram {
+  background: linear-gradient(10deg, #efa513, #9007dc);
+}
+
+.card-section-2 .social-media-icon .fa-youtube {
+  background: #c62026;
+}
+
+.card-section-2 .social-media-icon .fa-twitter {
+  background: #1c9deb;
+}
